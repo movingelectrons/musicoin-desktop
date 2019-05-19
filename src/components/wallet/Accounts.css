@@ -1,0 +1,36 @@
+
+.accounts_header{
+	display: flex;
+	background: grey;
+}
+
+.accounts_header div{
+	padding: 0.75em;
+	font-weight: bold;
+}
+
+.ab_spacer{
+	width: 16em;
+}
+
+.actions{
+	margin-left: auto;
+}
+
+.container{
+	display: flex;
+}
+
+.container div{
+	padding: 0.75em;
+	font-family: monospace;
+}
+
+.copy_icon, .action_icons{
+	font-size: 1.25em;
+	margin-top: -0.25em;
+}
+
+.action_icons{
+	margin-left: auto;
+}

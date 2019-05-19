@@ -1,0 +1,64 @@
+{
+  "name": "musicoin-desktop-wallet",
+  "version": "2.0.0",
+  "private": false,
+  "author": "Jerome Stonebridge <github.com/movingelectrons>",
+  "description": "Musicoin Desktop App v2",
+  "main": "main.js",
+  "scripts": {
+    "start:gmc": "./gmc/gmc-linux-amd64 --rpc --rpcapi admin,db,eth,net,web3,personal --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain http://localhost:8080 --fast --cache=512",
+    "start": "npm start:react",
+    "start:react": "MODE=dev webpack-dev-server --mode development --progress",
+    "start:electron": "MODE=dev electron .",
+    "build": "webpack --mode production",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "child_process": "^1.0.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "reactstrap": "^8.0.0",
+    "web3": "git+https://github.com/Musicoin/web3.js.git",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.0.0",
+    "electron": "^3.0.11",
+    "electron-builder": "^20.38.3",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "build": {
+    "productName": "MusicoinDesktopApp2",
+    "appId": "com.musicoin.desktop",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "build/**/*",
+      "assets/**/*",
+      "!dist/**/*",
+      "!src/**/*",
+      "node_modules/**/*"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
